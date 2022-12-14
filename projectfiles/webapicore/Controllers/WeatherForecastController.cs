@@ -6,6 +6,7 @@ namespace webapicore.Controllers;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
+    private dbContext _dbContext;
     private static readonly string[] Summaries = new[]
     {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -13,8 +14,9 @@ public class WeatherForecastController : ControllerBase
 
     private readonly ILogger<WeatherForecastController> _logger;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public WeatherForecastController(ILogger<WeatherForecastController> logger, dbContext context)
     {
+        _dbContext = context;
         _logger = logger;
     }
 
