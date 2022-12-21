@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1ob7VimzkeHlWiytrQn3MuLTkMSy7kG4LQWnRXZ7wqzBy90SAzs/P4UFldW9QQ8OVOcxau0nYa12esw7ooDxiA==",
+  "dgSpecHash": "LLEAHg90kut1ZaZeoKGCAwtxHsbMIyVmtXvvhkuDhe+QZGKZtXdXUVnRbp3UiLUYjTgy+v1mFSmm/e/f0g8CRw==",
   "success": true,
   "projectFilePath": "/Users/kmoussa/dev/AKSWorkshop/projectfiles/webapicore/webapicore.csproj",
   "expectedPackageFiles": [
@@ -32,7 +32,7 @@
     "/Users/kmoussa/.nuget/packages/microsoft.entityframeworkcore.design/5.0.8/microsoft.entityframeworkcore.design.5.0.8.nupkg.sha512",
     "/Users/kmoussa/.nuget/packages/microsoft.entityframeworkcore.relational/5.0.8/microsoft.entityframeworkcore.relational.5.0.8.nupkg.sha512",
     "/Users/kmoussa/.nuget/packages/microsoft.entityframeworkcore.relational.design/1.1.6/microsoft.entityframeworkcore.relational.design.1.1.6.nupkg.sha512",
-    "/Users/kmoussa/.nuget/packages/microsoft.entityframeworkcore.sqlserver/5.0.3/microsoft.entityframeworkcore.sqlserver.5.0.3.nupkg.sha512",
+    "/Users/kmoussa/.nuget/packages/microsoft.entityframeworkcore.sqlserver/5.0.8/microsoft.entityframeworkcore.sqlserver.5.0.8.nupkg.sha512",
     "/Users/kmoussa/.nuget/packages/microsoft.entityframeworkcore.sqlserver.design/1.1.6/microsoft.entityframeworkcore.sqlserver.design.1.1.6.nupkg.sha512",
     "/Users/kmoussa/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "/Users/kmoussa/.nuget/packages/microsoft.extensions.caching.abstractions/5.0.0/microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
