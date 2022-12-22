@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: coredns-custom
+  namespace: kube-system
+data:
+  puglife.server: | # you may select any name here, but it must end with the .server file extension
+    puglife.local:53 {
+        errors
+        cache 30
+        forward . 192.11.0.1  # this is my test/dev DNS server
+    }

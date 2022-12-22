@@ -1,0 +1,21 @@
+kind: Ingress
+metadata:
+ name: contoso-ingress
+   annotations: kubernetes.io/ingress.class: ”PublicIngress" 
+spec:
+ tls:
+ - hosts:
+   - contoso.com
+   secretName: contoso-secret
+ rules:
+   - host: contoso.com
+     http:
+      paths:
+      - path: /a
+        backend:
+         serviceName: servicea
+         servicePort: 80
+      - path: /b
+        backend:
+         serviceName: serviceb
+         servicePort: 80

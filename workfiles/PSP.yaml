@@ -1,0 +1,39 @@
+apiVersion: policy/v1beta1
+kind: PodSecurityPolicy
+metadata:
+  name: restricted
+  annotations:
+    seccomp.security.alpha.kubernetes.io/allowedProfileNames: 'docker/default'
+    apparmor.security.beta.kubernetes.io/allowedProfileNames: 'runtime/default'
+    seccomp.security.alpha.kubernetes.io/defaultProfileName: 'docker/default'
+    apparmor.security.beta.kubernetes.io/defaultProfileName: 'runtime/default'
+  spec:
+    privileged: false  
+    allowPrivilegeEscalation: false # Required to prevent escalations to root.
+    requiredDropCapabilities: # This is redundant with non-root + disallow privilege escalation, but we can provide it for defense in depth.
+      - ALL
+    volumes: # Allow core volume types.
+      - 'configMap'    
+      - 'emptyDir'    
+      - 'projected'
+      - 'secret'
+      - 'downwardAPI'
+      - 'persistentVolumeClaim' # Assume that persistentVolumes set up by the cluster admin are safe to use.
+    hostNetwork: false
+    hostIPC: false
+    hostPID: false
+    runAsUser:
+      rule: 'MustRunAsNonRoot' # Require the container to run without root privileges.
+    seLinux:
+      rule: 'RunAsAny' # This policy assumes the nodes are using AppArmor rather than SELinux.
+    supplementalGroups:
+      rule: 'MustRunAs'    
+      ranges:
+        - min: 1      # Forbid adding the root group.
+          max: 65535
+    fsGroup:
+      rule: 'MustRunAs'    
+      ranges:      
+        - min: 1     # Forbid adding the root group.
+          max: 65535
+    readOnlyRootFilesystem: false
