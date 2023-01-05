@@ -1,0 +1,11 @@
+Add this snipped to your ~/.zshrc and ~/.bashrc. It allows you not to repeat the flag anytime you perform a docker run command:
+
+# useful only for Mac OS Silicon M1, 
+# still working but useless for the other platforms
+docker() {
+ if [[ `uname -m` == "arm64" ]] && [[ "$1" == "run" || "$1" == "build" ]]; then
+    /usr/local/bin/docker "$1" --platform linux/amd64 "${@:2}"
+  else
+     /usr/local/bin/docker "$@"
+  fi
+}

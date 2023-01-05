@@ -1,0 +1,88 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/kmoussa/dev/AKSWorkshop/projectfiles/graphQL/GQL/GQL.csproj": {}
+  },
+  "projects": {
+    "/Users/kmoussa/dev/AKSWorkshop/projectfiles/graphQL/GQL/GQL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kmoussa/dev/AKSWorkshop/projectfiles/graphQL/GQL/GQL.csproj",
+        "projectName": "GQL",
+        "projectPath": "/Users/kmoussa/dev/AKSWorkshop/projectfiles/graphQL/GQL/GQL.csproj",
+        "packagesPath": "/Users/kmoussa/.nuget/packages/",
+        "outputPath": "/Users/kmoussa/dev/AKSWorkshop/projectfiles/graphQL/GQL/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/kmoussa/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "GraphQL.Server.Ui.Voyager": {
+              "target": "Package",
+              "version": "[7.2.0, )"
+            },
+            "HotChocolate.AspNetCore": {
+              "target": "Package",
+              "version": "[12.15.2, )"
+            },
+            "HotChocolate.Data.Entityframework": {
+              "target": "Package",
+              "version": "[12.15.2, )"
+            },
+            "Microsoft.EntityframeworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.EntityframeworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

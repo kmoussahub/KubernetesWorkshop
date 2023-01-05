@@ -1,0 +1,19 @@
+version: '3'
+services:
+  sqlserver:
+    image: "mcr.microsoft.com/azure-sql-edge"
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "P@$$w0rd.1"
+      MSSQL_PID: "Developer"
+      MSSQL_USER: "SA"
+    ports:
+      - "1433:1433"
+    platform: linux/amd64
+  mysql:
+    image: "mysql"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "admin"
+      
+   
