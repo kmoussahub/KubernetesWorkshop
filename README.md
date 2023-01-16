@@ -19,3 +19,6 @@ https://learn.microsoft.com/en-us/azure/api-management/api-management-kubernetes
 https://learn.microsoft.com/en-us/azure/aks/ingress-tls?tabs=azure-cli
 
 https://learn.microsoft.com/en-us/azure/security/fundamentals/zero-trust
+
+
+1
