@@ -1,5 +1,11 @@
 # AKSWorkshop
 
+This workshop is designed to train and onboard IT professionals and Software engineers that would like to start learning docker and Kubernetes principles.
+
+## Chapter 1
+
+
+
 https://learn.microsoft.com/en-us/azure/aks/concepts-clusters-workloads
 
 https://learn.microsoft.com/en-us/azure/aks/best-practices
