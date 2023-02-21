@@ -1,4 +1,4 @@
-# AKSWorkshop
+# Kubernetes Workshop
 
 This workshop is designed to train and onboard IT professionals and Software engineers that would like to start learning docker and Kubernetes principles.
 
