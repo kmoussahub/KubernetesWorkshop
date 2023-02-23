@@ -1,1 +1,4 @@
 projectfiles/.DS_Store
+skaffold
+projectfiles/consoleService/obj/**
+projectfiles/webappcore/obj/**
