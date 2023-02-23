@@ -1,0 +1,40 @@
+# https://skaffold.dev/docs/references/yaml/?version=v4beta1
+apiVersion: skaffold/v4beta1
+kind: Config
+metadata:
+  name: local-deploy
+profiles:
+  - name: local-cluster-core
+    deploy:
+      helm:
+        releases:
+          - name: cert-manager
+            remoteChart: cert-manager
+            repo: "https://charts.jetstack.io"
+            namespace: cert-manager
+            version: "v1.9.1"
+            createNamespace: true
+            valuesFiles:
+              - "helm-values/cert-manager-values.yaml"
+          - name: external-secrets
+            remoteChart: external-secrets
+            repo: "https://charts.external-secrets.io/"
+            namespace: eso
+            version: "v0.7.2"
+            createNamespace: true
+            valuesFiles:
+              - "helm-values/external-secrets-values.yaml"
+          - name: istio-base
+            remoteChart: base
+            repo: "https://istio-release.storage.googleapis.com/charts"
+            namespace: istio-system
+            version: "1.16.1"
+            createNamespace: true
+          - name: istio
+            remoteChart: istiod
+            repo: "https://istio-release.storage.googleapis.com/charts"
+            namespace: istio-system
+            version: "1.16.1"
+            createNamespace: false
+            valuesFiles:
+              - "helm-values/istio-values.yaml"

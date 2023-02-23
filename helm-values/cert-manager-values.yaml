@@ -1,0 +1,5 @@
+installCRDs: true
+startupapicheck:
+  enabled: false
+nodeSelector:
+  kubernetes.azure.com/mode: user
